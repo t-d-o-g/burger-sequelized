@@ -1,0 +1,22 @@
+$bg-color: #ffcc66;
+
+body {
+    background: $bg-color;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(250, 70, 70);
+}
+
+#burgerInput {
+  width: 50%;;
+}
+
+#burgerLists {
+  font-size: 24px;
+}
+
+.devour-btn {
+  font-size: 18px;
+}

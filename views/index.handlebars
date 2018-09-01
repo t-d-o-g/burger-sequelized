@@ -1,0 +1,43 @@
+<div class="text-center">
+  <img src="assets/img/burger.jpg" alt="burger-img">
+</div>
+
+<h1>Eat-Da-Burger!</h1>
+
+<div class="row justify-content-between" id="burgerLists">
+  <div class="text-center col-5" id="burgers">
+    <h2>Burgers</h2>
+    <ul class="list-group">
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="text-center col-5" id="devouredBurgers">
+    <h2>Burgers Devoured</h2>
+    <ol class="list-group">
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block}}
+        {{/if}}
+      {{/each}}
+    </ol>
+  </div>
+</div>
+
+
+<form class="input-form">
+  <div class="container text-center">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="burgerInput"></label>
+        <textarea class="form-control m-auto" id="burgerInput" rows="4"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p class="m-3">Enter a burger that you would like to eat.</p>
+  </div>
+</form>
