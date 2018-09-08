@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(() => {
   $('.input-form').on('submit', event => {
     event.preventDefault();
 

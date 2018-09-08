@@ -1,7 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const burger = require('../models/burgersModel');
+const burger = require('../models/burger');
+const db = require('../models');
 
+module.exports = app => {
+  // router.get('/', (req, res) => {
+    app.get('/', (req, res) => {
+      db.Burger.findAll({})
+        .then(dbBurger => {
+            const hbsObj = {
+                burgers: dbBurger 
+            };
+            console.log(hbsObj);
+            res.render('index', hbsObj);
+        });
+    });
+}
+/*
 router.get('/', (req, res) => {
     burger.selectAll(data => {
         const hbsObj = {
@@ -38,3 +53,4 @@ router.put('/api/burgers/:id', (req, res) => {
 });
 
 module.exports = router;
+*/

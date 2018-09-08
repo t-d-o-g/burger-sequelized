@@ -1,13 +1,13 @@
-const mysql = require('mysql');
-const env = process.env.NODE_ENV || 'local';
+const mysql = require('mysql2');
+const env = process.env.NODE_ENV || 'development';
 let pool;
 
-if (env === 'local') {
+if (env === 'development') {
     pool = mysql.createPool({
         host: 'localhost',
         port: 3306,
         user: 'root',
-        password: 'password',
+        password: 'root',
         database: 'heroku_bf59787b80b0d4b'
     });
 } else if (env === 'production') {
