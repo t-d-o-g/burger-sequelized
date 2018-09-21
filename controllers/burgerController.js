@@ -2,12 +2,12 @@ const db = require('../models');
 
 exports.index = (req, res) => {
   db.Burger.findAll({})
-    .then(dbBurger => {
-        const hbsObj = {
-            burgers: dbBurger 
-        };
-        console.log(hbsObj);
-        res.render('index', hbsObj);
+    .then((dbBurger) => {
+      const hbsObj = {
+        burgers: dbBurger,
+      };
+      console.log(hbsObj);
+      res.render('index', hbsObj);
     });
 };
 
@@ -34,7 +34,7 @@ router.post('/api/burgers', (req, res) => {
 
 router.put('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
-    
+
     console.log('condition', condition);
     burger.updateOne({
         devoured: req.body.devoured
