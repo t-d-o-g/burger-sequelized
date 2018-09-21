@@ -17,6 +17,8 @@ app.set('view engine', 'handlebars');
 
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
+    /* eslint-disable no-console */
     console.log(`Express server listening on port ${PORT}`);
+    /* eslint-enable no-console */
   });
 });

@@ -3,6 +3,7 @@ module.exports = {
     "env": {
       "es6": true,
       "browser": true,
+      "jquery": true
   },
   "parserOptions": {
       "ecmaVersion": 2018,

@@ -6,7 +6,6 @@ exports.index = (req, res) => {
       const hbsObj = {
         burgers: dbBurger,
       };
-      console.log(hbsObj);
       res.render('index', hbsObj);
     });
 };

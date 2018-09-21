@@ -11,12 +11,11 @@ $(document).ready(() => {
       type: 'POST',
       data: newBurger,
     }).then(() => {
-      console.log('Created my new burger');
-      location.reload();
+      window.location.reload();
     });
   });
 
-  $('.devour-btn').on('click', function (event) {
+  $('.devour-btn').on('click', () => {
     const id = $(this).data('id');
 
     const devouredTrue = {
@@ -27,8 +26,7 @@ $(document).ready(() => {
       type: 'PUT',
       data: devouredTrue,
     }).then(() => {
-      console.log(`Burger with id: ${id} devoured!`);
-      location.reload();
+      window.location.reload();
     });
   });
 });
