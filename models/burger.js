@@ -16,22 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   return Burger;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 const orm = require('../config/orm');
 
@@ -53,6 +37,4 @@ const burgersModel = {
         });
     }
 };
-
-module.exports = burgersModel;
 */
