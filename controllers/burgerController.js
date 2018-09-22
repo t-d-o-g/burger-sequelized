@@ -13,42 +13,24 @@ exports.index = (req, res) => {
 exports.createBurger = (req, res) => {
   db.Burger.create({
     burger_name: req.body.burger_name,
-    devoured: req.body.devoured
+    devoured: req.body.devoured,
   })
-  .then(result => {
-    res.json({ id: result.insertId })
-  });
-}
+    .then((result) => {
+      res.json({ id: result.insertId });
+    });
+};
 
 exports.updateBurger = (req, res) => {
-  const condition = `id = ${req.params.id}`;
-  console.log('condition', req.params.id);
+  const burgerId = req.params.id;
 
   db.Burger.update({
     devoured: req.body.devoured,
   }, {
     where: {
-      id: 1 
-    }
+      id: burgerId,
+    },
   })
-  .then(result => {
-    res.json(result);
-  });
-}
-
-/*
-router.put('/api/burgers/:id', (req, res) => {
-    const condition = `id = ${req.params.id}`;
-
-    console.log('condition', condition);
-    burger.updateOne({
-        devoured: req.body.devoured
-    }, condition, result => {
-        if (result.changedRows == 0) {
-            return res.status(404).end();
-        } else {
-            res.status(200).end();
-        }
+    .then((result) => {
+      res.json(result);
     });
-});
-*/
+};

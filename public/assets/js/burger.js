@@ -15,7 +15,7 @@ $(document).ready(() => {
     });
   });
 
-  $('.devour-btn').on('click', () => {
+  $('.devour-btn').on('click', function cb() {
     const id = $(this).data('id');
 
     const devouredTrue = {
