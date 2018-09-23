@@ -19,7 +19,7 @@ $(document).ready(() => {
     const id = $(this).data('id');
 
     const devouredTrue = {
-      devoured: 1,
+      devoured: true,
     };
 
     $.ajax(`/api/burgers/${id}`, {
