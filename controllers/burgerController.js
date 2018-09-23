@@ -1,4 +1,4 @@
-const db = require('../models');
+const db = require('../server/models');
 
 exports.index = (req, res) => {
   db.Burger.findAll({})
