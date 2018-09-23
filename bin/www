@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 
-require('dotenv').config();
 const app = require('../app');
 const db = require('../server/models');
 const debug = require('debug')('burger-sequelize:server');
