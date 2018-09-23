@@ -10,6 +10,7 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/', burgerRouter);
 
