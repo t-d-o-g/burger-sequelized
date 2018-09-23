@@ -5,8 +5,16 @@ const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config.json')[env];
+const { Client } = require('pg');
 
-const db = {};
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+const db = {}; 
 
 let sequelize;
 if (config.use_env_variable) {
