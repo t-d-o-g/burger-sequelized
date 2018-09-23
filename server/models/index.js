@@ -7,12 +7,14 @@ const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config.json')[env];
 const { Client } = require('pg');
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
+if (env === 'production') {
+  const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+  });
 
-client.connect();
+  client.connect();
+} 
 
 const db = {}; 
 
