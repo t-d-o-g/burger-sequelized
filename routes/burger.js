@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const burgerController = require('../controllers/burgerController');
+const burgerController = require('../controllers/burger-controller');
 
 router.get('/', burgerController.index);
 
