@@ -22,7 +22,7 @@
 
 ### **Description**
 
-[Burger Sequelized](https://burger-sequelized-28078.herokuapp.com/) is the sequel to [Burger](https://floating-retreat-94058.herokuapp.com/) and functions the same.  Sequelize is used instead of the custom ORM used in the original Burger to query the database. Postgres is used for the database and the site is hosted on Heroku. ESLint is used for code linting with Airbnb styleguide. 
+[Burger Sequelized](https://burger-sequelized-28078.herokuapp.com/) is the sequel to [Burger](https://floating-retreat-94058.herokuapp.com/) and functions the same.  Sequelize is used instead of the custom ORM used in the original Burger to query the database. Postgres is used for the database and the site is hosted on Heroku. ESLint is used for code linting configured to the Airbnb JavaScript style guide. 
 
 ### **Usage**
 * Enter your burger of choice in the blank text field (plain, deluxe, supreme, etc.)
